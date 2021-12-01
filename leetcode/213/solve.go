@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	fmt.Println(rob([]int{2, 3, 2}))
@@ -9,7 +11,41 @@ func main() {
 	fmt.Println(rob([]int{5, 1, 1, 10}))
 }
 
+/**
+* DP
+ */
+
 func rob(nums []int) int {
+	var ans int = nums[0]
+	with, without := 0, 0
+
+	for i := 1; i < len(nums); i++ {
+		temp := max(with, without)
+		with = nums[i] + without
+		without = temp
+	}
+
+	ans = max(ans, max(with, without))
+	with, without = 0, 0
+	for i := 0; (i + 1) < len(nums); i++ {
+		temp := max(with, without)
+		with = nums[i] + without
+		without = temp
+	}
+	ans = max(ans, max(with, without))
+	return ans
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+/* Normal Solution*/
+
+func rob2(nums []int) int {
 	if len(nums) == 1 {
 		return nums[0]
 	}
