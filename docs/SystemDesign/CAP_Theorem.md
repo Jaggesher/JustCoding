@@ -1,6 +1,6 @@
 # CAP Theorem
 Let's learn about the CAP theorem and its usage in distributed systems.
----
+
 ## Background
 In distributed systems, different types of failures can occur, e.g., servers can crash or fail permanently, disks can go bad resulting in data losses, or network connection can be lost, making a part of the system inaccessible. How can a distributed system model itself to get the maximum benefits out of different resources available?
 
