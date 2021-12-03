@@ -12,7 +12,7 @@ Load Balancer (LB) is another critical component of any distributed system. It h
 Typically a load balancer sits between the client and the server accepting incoming network and application traffic and distributing the traffic across multiple backend servers using various algorithms. By balancing application requests across multiple servers, a load balancer reduces individual server load and prevents any one application server from becoming a single point of failure, thus improving overall application availability and responsiveness.
 
 <p align="center">
-  <img src="../images/LoadBalancer.png" width="450" alt="Load Balancer" />
+  <img src="../images/LoadBalancer.png" width="750" alt="Load Balancer" />
 </p>
 
 To utilize full scalability and redundancy, we can try to balance the load at each layer of the system. We can add LBs at three places:
@@ -53,5 +53,5 @@ There is a variety of load balancing methods, which use different algorithms for
 The load balancer can be a single point of failure; to overcome this, a second load balancer can be connected to the first to form a cluster. Each LB monitors the health of the other and, since both of them are equally capable of serving traffic and failure detection, in the event the main load balancer fails, the second load balancer takes over.
 
 <p align="center">
-  <img src="../images/LoadBalancer3.png" width="450" alt="Redundant Load Balancers" />
+  <img src="../images/LoadBalancer3.png" width="750" alt="Redundant Load Balancers" />
 </p>
