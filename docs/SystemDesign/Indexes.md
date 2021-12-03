@@ -1,6 +1,12 @@
 # Indexes
-
+## Sections
+- [Indexes](#indexes)
+  - [Sections](#sections)
+  - [- How do Indexes decrease write performance?](#--how-do-indexes-decrease-write-performance)
+  - [Example: A library catalog](#example-a-library-catalog)
+  - [How do Indexes decrease write performance?](#how-do-indexes-decrease-write-performance)
 ---
+
 Indexes are well known when it comes to databases. Sooner or later there comes a time when database performance is no longer satisfactory. One of the very first things you should turn to when that happens is database indexing.
 
 The goal of creating an index on a particular table in a database is to make it faster to search through the table and find the row or rows that we want. Indexes can be created using one or more columns of a database table, providing the basis for both rapid random lookups and efficient access of ordered records.
