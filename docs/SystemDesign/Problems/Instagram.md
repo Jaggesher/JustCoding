@@ -131,7 +131,7 @@ If only one instance of a service is required to run at any point, we can run a 
 Creating redundancy in a system can remove single points of failure and provide a backup or spare functionality if needed in a crisis. For example, if there are two instances of the same service running in production and one fails or degrades, the system can failover to the healthy copy. Failover can happen automatically or require manual intervention.
 
 <p align="center">
-  <img src="../../images/../Instagram_Reliability_Redundency.png" width="750" alt="Instagram" />
+  <img src="../../images/Instagram_Reliability_Redundency.png" width="750" alt="Instagram" />
 </p>
 
 ## Data Sharding
