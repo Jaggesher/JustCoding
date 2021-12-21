@@ -9,11 +9,9 @@ func main() {
 }
 
 func climbStairs(n int) int {
-	var arr []int = make([]int, 47)
-	arr[0], arr[1] = 1, 1
-	for i := 0; i < n; i++ {
-		arr[i+1] += arr[i]
-		arr[i+2] += arr[i]
+	first, sec := 1, 1
+	for i := 1; i < n; i++ {
+		first, sec = sec, first+sec
 	}
-	return arr[n-1]
+	return sec
 }
