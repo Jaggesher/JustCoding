@@ -8,6 +8,10 @@ func main() {
 	fmt.Println("Case 3: ", peakIndexInMountainArray([]int{0, 10, 5, 2}))
 }
 
+/***
+ * Time: O(n log n)
+ * Space: O(1)
+ */
 func peakIndexInMountainArray(arr []int) int {
 	st, end := 0, len(arr)
 	for st < end {
