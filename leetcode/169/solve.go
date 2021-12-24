@@ -7,6 +7,11 @@ func main() {
 	fmt.Println("Case 2:", majorityElement([]int{2, 2, 1, 1, 1, 2, 2}))
 }
 
+/***
+ * Algorithm: Boyer-Moore Voting Algorithm
+ * Time: O(n)
+ * Space: O(1)
+ */
 func majorityElement(nums []int) int {
 	var majority, count int = nums[0], 1
 	for i := 1; i < len(nums); i++ {
