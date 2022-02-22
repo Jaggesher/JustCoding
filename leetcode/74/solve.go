@@ -8,7 +8,7 @@ func main() {
 }
 
 /***
- * Time: O(mn)
+ * Time: O(log(mn))
  * Space: O(1)
  */
 func searchMatrix(matrix [][]int, target int) bool {
