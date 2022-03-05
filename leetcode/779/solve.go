@@ -11,6 +11,10 @@ func main() {
 	fmt.Println("Case 3: ", champagneTower(100000009, 33, 17))
 }
 
+/***
+ * Time : O(n^2)
+ * Space : O(n^2)
+ */
 func champagneTower(poured int, query_row int, query_glass int) float64 {
 	var stack [101][101]float64
 	stack[0][0] = float64(poured)
