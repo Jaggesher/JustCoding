@@ -13,6 +13,10 @@ type ListNode struct {
 	Next *ListNode
 }
 
+/***
+ * Time: O(n)
+ * Space: O(1)
+ */
 func rotateRight(head *ListNode, k int) *ListNode {
 	if head == nil || k == 0 {
 		return head
