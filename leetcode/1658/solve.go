@@ -11,38 +11,35 @@ func main() {
 	fmt.Println(minOperations([]int{3}, 3))
 }
 
+/***
+ * Time: O(n)
+ * Space: O(1)
+ */
 func minOperations(nums []int, x int) int {
-	var ans int = -1
-	st, end, sum := -1, len(nums)-1, 0
-
-	for (st + 1) < len(nums) {
-		tm := sum + nums[st+1]
-		if tm > x {
-			break
-		}
-		sum = tm
+	var st, end, sum, ans int = -1, len(nums) - 1, 0, -1
+	for (st+1) < len(nums) && (sum+nums[st+1]) <= x {
 		st++
-		if tm == x {
+		sum += nums[st]
+		if sum == x {
 			ans = st + 1
 			break
 		}
 	}
 
 	for st < end && end >= 0 {
-		x -= nums[end]
-		if x < 0 {
-			break
-		}
-		for st >= 0 && sum > x {
+		sum += nums[end]
+		for sum > x && st >= 0 {
 			sum -= nums[st]
 			st--
 		}
-		if x == sum {
+
+		if sum == x {
 			tm := (st + 1) + (len(nums) - end)
 			if ans == -1 || ans > tm {
 				ans = tm
 			}
 		}
+
 		end--
 	}
 
