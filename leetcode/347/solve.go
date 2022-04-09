@@ -3,12 +3,18 @@ package main
 import (
 	"container/heap"
 	"fmt"
+	"sort"
 )
 
 func main() {
 	fmt.Println(topKFrequent([]int{1, 1, 1, 2, 2, 3}, 2))
 }
 
+/***
+ * Approach: Heap
+ * Time: O(n log n)
+ * Space: O(n)
+ */
 type IntHeap []int
 
 var dictionary map[int]int
@@ -31,7 +37,7 @@ func (h *IntHeap) Pop() interface{} {
 	return x
 }
 
-func topKFrequent(nums []int, k int) []int {
+func topKFrequentHeap(nums []int, k int) []int {
 	var ans []int = make([]int, 0)
 	dictionary = make(map[int]int)
 	items := IntHeap{}
@@ -47,4 +53,22 @@ func topKFrequent(nums []int, k int) []int {
 		k--
 	}
 	return ans
+}
+
+/***
+ * Approach: Sorting, and HashMap
+ * Time: O(n log n)
+ * Space: O(n)
+ */
+func topKFrequent(nums []int, k int) []int {
+	var keys []int = make([]int, 0)
+	var tracker map[int]int = make(map[int]int)
+	for _, vl := range nums {
+		if _, ok := tracker[vl]; !ok {
+			keys = append(keys, vl)
+		}
+		tracker[vl]++
+	}
+	sort.Slice(keys, func(i, j int) bool { return tracker[keys[i]] > tracker[keys[j]] })
+	return keys[:k]
 }
