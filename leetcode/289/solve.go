@@ -10,6 +10,10 @@ func main() {
 	fmt.Println(arr)
 }
 
+/***
+ * Time: O(m*n)
+ * Space: O(1)
+ */
 func gameOfLife(board [][]int) {
 	var dirs [8][2]int = [8][2]int{{-1, -1}, {1, 1}, {0, 1}, {1, 0}, {0, -1}, {-1, 0}, {1, -1}, {-1, 1}}
 	for i, row := range board {
