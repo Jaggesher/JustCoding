@@ -7,6 +7,10 @@ func main() {
 	fmt.Println("Case 1: ", generateMatrix(1))
 }
 
+/***
+ * Time: O(n*n)
+ * Space: O(1)
+ */
 func generateMatrix(n int) [][]int {
 	var ans [][]int = make([][]int, n)
 	for i := 0; i < n; i++ {
