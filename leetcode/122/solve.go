@@ -8,6 +8,10 @@ func main() {
 	fmt.Println("Case 3:", maxProfit([]int{7, 6, 4, 3, 1}))
 }
 
+/***
+ * Time: O(n)
+ * Space: O(1)
+ */
 func maxProfit(prices []int) int {
 	var ans int = 0
 	for i := 1; i < len(prices); i++ {
