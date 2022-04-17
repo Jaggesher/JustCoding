@@ -10,6 +10,10 @@ func main() {
 
 }
 
+/**
+ * Time: O(n*n)
+ * Space: O(n)
+ */
 func isValidSudoku(board [][]byte) bool {
 	const N = 9
 	var row, col, boxes [N]int
