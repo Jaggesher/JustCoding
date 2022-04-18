@@ -12,6 +12,10 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+/***
+ * Time: O(n)
+ * Space: O(h)
+ */
 func kthSmallest(root *TreeNode, k int) int {
 	var ans int
 	bfs(root, k, 0, &ans)
