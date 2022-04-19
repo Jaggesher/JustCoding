@@ -14,6 +14,10 @@ type TreeNode struct {
 
 var node1, node2 *TreeNode
 
+/***
+ * Time: O(n)
+ * Space: O(h)
+ */
 func recoverTree(root *TreeNode) {
 	node1, node2 = nil, nil
 	inorderTraverse(root, nil)
