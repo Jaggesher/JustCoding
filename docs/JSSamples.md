@@ -1,7 +1,7 @@
 # Some JS Sample
 
 - Inheritance With Function
-```
+``` js
 function Identity(name, age){
   this.name = name
   this.age = age
