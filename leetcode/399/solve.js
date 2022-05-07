@@ -5,7 +5,7 @@
  * @return {number[]}
  */
 var calcEquation = function (equations, values, queries) {
-    const graph = contructGraph(equations, values);
+    const graph = constructGraph(equations, values);
     const ans = new Array(queries.length).fill(-1);
     for (const index in queries) {
         const [A, B] = queries[index];
@@ -15,7 +15,7 @@ var calcEquation = function (equations, values, queries) {
     return ans
 };
 
-function contructGraph(equations, values) {
+function constructGraph(equations, values) {
     const newNode = (node, weight) => { return { node, weight } };
     const graph = new Map();
     for (const index in equations) {
